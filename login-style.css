@@ -18,7 +18,7 @@ body {
 }
 
 .logo img {
-    width: 100px;
+    width: 250px;
     height: auto;
 }
 
@@ -30,6 +30,7 @@ h1 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
+    color: #f00;
 }
 
 label {
@@ -55,7 +56,7 @@ input[type="password"] {
 }
 
 .button:hover {
-    background-color: #d00;
+    background-color: #691010;
 }
 
 .buttons {
