@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profil</title>
+    <link rel="stylesheet" href="style/profile.css">
+</head>
+<body>
+    <div class="container">
+        <div class="back-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.687 11.168l-6.34 6.342a.5.5 0 0 1-.707 0l-6.34-6.342a.5.5 0 1 1 .707-.707L10.293 13.5l5.396-5.396a.5.5 0 0 1 .707 0z"/></svg>
+        </div>
+        <h2 class="title">Edit Profil</h2>
+        <div class="profile-pic">
+            <img src="https://via.placeholder.com/100" alt="Profile Picture">
+            <div class="camera-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 13.5a.5.5 0 0 1 .5.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z"/></svg>
+            </div>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="name">Nama</label>
+                <input type="text" id="name" placeholder="Nama lengkap" value="abcdefghijk">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Alamat email" value="abc@123.gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" value="********">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <select id="phone">
+                    <option value="+62 123456789">+62 123456789</option>
+                    <option value="+62 987654321">+62 987654321</option>
+                </select>
+            </div>
+            <button type="submit" class="save-button">Save changes</button>
+        </form>
+    </div>
+</body>
+</html>

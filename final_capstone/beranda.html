@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SegeraTolong</title>
+    <link rel="stylesheet" href="style/beranda.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome">
+            <h2>SegeraTolong</h2>
+            <div class="nav">
+                <h3 id="welcome-text">Welcome, User</h3>
+                <img src="assets/profile.png" alt="Profile" class="user-icon">
+            </div>
+        </div>
+        <button class="button">Jangan panik saat darurat terjadi. 
+            <p>Aplikasi pertolongan pertama kami siap membantu Anda memberikan tindakan yang diperlukan.</p>
+        </button>
+        <div class="frame-container">
+            <div class="frame" onclick="callNumber('0213925230')">
+                <img src="assets/komnasham.png" alt="Komnas HAM">
+                <p>Komnas HAM</p>
+            </div>
+            <div class="frame" onclick="callNumber('110')">
+                <img src="assets/polisi.png" alt="Polisi">
+                <p>Polisi</p>
+            </div>
+            <div class="frame" onclick="callNumber('118')">
+                <img src="assets/ambulance.png" alt="Ambulance">
+                <p>Ambulance</p>
+            </div>
+        </div>
+        <div class="frame-container">
+            <div class="frame" onclick="callNumber('113')">
+                <img src="assets/pemadam.png" alt="Pemadam Kebakaran">
+                <p>Pemadam Kebakaran</p>
+            </div>
+            <div class="frame" onclick="callNumber('115')">
+                <img src="assets/basarnas.png" alt="BASARNAS">
+                <p>BASARNAS</p>
+            </div>
+            <div class="frame" onclick="callNumber('12')">
+                <img src="assets/pln.png" alt="PLN">
+                <p>PLN</p>
+            </div>
+        </div>
+        <div class="frame-title">
+            <h3>Informasi Terbaru</h3>
+        </div>
+        <div class="info">
+            <button class="info-button" onclick="showNews('https://www.bnpb.go.id/berita/banjir-dan-tanah-longsor-melanda-aceh-selatan-sebanyak-8142-jiwa-terdampak')">Banjir dan Longsor di Aceh</button>
+            <button class="info-button" onclick="showNews('https://www.liputan6.com/regional/read/5620887/gunung-ibu-maluku-utara-erupsi-lontarkan-lava-pijar')">Erupsi Gunung Ibu di Maluku Utara</button>
+            <button class="info-button" onclick="showNews('https://www.kompas.id/baca/nusantara/2024/04/17/banjir-bencana-yang-paling-banyak-terjadi-di-kalbar')">Banjir di Kalimantan Barat</button>
+        </div>
+        <div class="nav">
+            <a href="profile.html" class="user-icon"></a>
+            </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+    <script>
+        function callNumber(number) {
+            window.location.href = 'tel:' + number;
+        }
+
+        function showNews(url) {
+            window.open(url, '_blank');
+        }
+
+        document.querySelector('.user-icon').addEventListener('click', function() {
+            window.location.href = 'profile.html';
+        });
+
+        // Retrieve the username from localStorage and update the welcome text
+        document.addEventListener('DOMContentLoaded', function() {
+            var username = localStorage.getItem('username') || 'User';
+            document.getElementById('welcome-text').textContent = `Welcome, ${username}`;
+        });
+    </script>
+</body>
+</html>
